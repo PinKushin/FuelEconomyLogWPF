@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="FuelEconomyLogWPF.mvvm.view.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:FuelEconomyLogWPF.mvvm.view"
+             mc:Ignorable="d"
+             d:DesignHeight="auto" d:DesignWidth="auto"
+             Background="Transparent"
+             Foreground="White">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="About"
+                       HorizontalAlignment="Center"
+                       Margin="20"
+                       FontSize="28"
+                       TextDecorations="Underline"/>
+            <TextBlock Text="Fuel Economy Log:"
+                       HorizontalAlignment="Center"
+                       Margin="10"/>
+            <TextBlock Text="Copyright 2023 by John Moore"
+                       HorizontalAlignment="Center"
+                       Margin="10"/>
+            <TextBlock Text="Written For My Harvard CS50 Final Project"
+                       HorizontalAlignment="Center"
+                       Margin="20"></TextBlock>
+        </StackPanel> 
+    </Grid>
+</UserControl>
