@@ -4,10 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:FuelEconomyLogWPF.mvvm.view"
+             xmlns:mpg="clr-namespace:FuelEconomyLogWPF.mvvm.model"
+             xmlns:vm="clr-namespace:FuelEconomyLogWPF.mvvm.viewmodel"
              mc:Ignorable="d"
              d:DesignHeight="auto" d:DesignWidth="auto"
              Background="Transparent"
              Foreground="White">
+    <UserControl.Resources>
+        <vm:MpgLogViewModel x:Key="ViewModel"></vm:MpgLogViewModel>
+    </UserControl.Resources>
     <StackPanel>
         <TextBlock Text="Fuel Log"
                    Foreground="White"
@@ -80,10 +85,20 @@
                      Background="DarkSlateBlue"
                      Foreground="White"
                      BorderThickness="0"
-                     TextWrapping="WrapWithOverflow"/>
-        </StackPanel>
-        <DataGrid>
+                     TextWrapping="WrapWithOverflow"
+                     SpellCheck.IsEnabled="True"/>
             
-        </DataGrid>
+            
+        </StackPanel>
+        <Grid x:Name="MpgGrid" DataContext="{StaticResource ViewModel}">
+            <DataGrid ItemsSource="{Binding MpgLog}"
+                   AlternatingRowBackground="DarkGray"
+                   AlternationCount="2"
+                   HorizontalAlignment="Center"
+                   Width="auto"
+                   CanUserAddRows="True"
+                   GridLinesVisibility="All">
+            </DataGrid>
+        </Grid>
     </StackPanel>
 </UserControl>

@@ -10,4 +10,16 @@ public struct MpgLog
     public decimal Miles { get; set; }
     public decimal Cost { get; set; }
     public decimal Mpg => Miles / Gallons;
+    private const double Tax = 0.009;
+
+    public MpgLog(DateTime purchaseDate, 
+        decimal gallons, 
+        decimal miles, 
+        decimal cost)
+    {
+        PurchaseDate = purchaseDate;
+        Gallons = gallons;
+        Miles = miles;
+        Cost = cost;
+    }
 }
