@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Input;
 
 namespace FuelEconomyLogWPF
 {
@@ -25,12 +26,28 @@ namespace FuelEconomyLogWPF
 
         private void minimizeButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Minimize Window
+            // Minimize Window
+            this.WindowState = WindowState.Minimized;
         }
 
-        private void moveButton_Click(object sender, RoutedEventArgs e)
+        private void MoveButton_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            // TODO: Move Window
+            // Move Window
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void maximizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Toggle fullscreen
+            if (this.WindowState == WindowState.Maximized)
+            {
+                this.WindowState = WindowState.Normal;
+                return;
+            }
+            this.WindowState = WindowState.Maximized;
         }
     }
 }

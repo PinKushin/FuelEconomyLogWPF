@@ -18,7 +18,8 @@
         AllowsTransparency="True"
         FontFamily="./fonts/#Josefin Sans Light, Verdana"
         FontSize="16"
-        Name="Main">
+        Name="Main"
+        MouseDown="MoveButton_MouseDown">
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
@@ -60,20 +61,7 @@
                         Grid.Column="1"
                         Grid.Row="0"
                         HorizontalAlignment="Right">
-                
-                <Button x:Name="MoveButton"
-                        Width="32"
-                        Height="32"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        Background="{StaticResource MoveButtonImg}"
-                        FontSize="24"
-                        FontWeight="Black"
-                        Margin="15"
-                        Focusable="True"
-                        Style="{StaticResource WindowButtonTheme}" 
-                        Click="moveButton_Click"/>
-                
+
                 <Button x:Name="MinimizeButton"
                         Width="32"
                         Height="32"
@@ -86,7 +74,20 @@
                         Focusable="True"
                         Style="{StaticResource WindowButtonTheme}"
                         Click="minimizeButton_Click"/>
-                
+
+                <Button x:Name="MaximizeButton"
+                        Width="32"
+                        Height="32"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="{StaticResource MoveButtonImg}"
+                        FontSize="24"
+                        FontWeight="Black"
+                        Margin="15"
+                        Focusable="True"
+                        Style="{StaticResource WindowButtonTheme}" 
+                        Click="maximizeButton_Click"/>
+
                 <Button Name="CloseButton"
                            Grid.Column="1"
                            Grid.Row="0"
@@ -101,7 +102,7 @@
                            Foreground="White"
                            Focusable="True"
                            Style="{StaticResource WindowButtonTheme}"
-                           Click="closeButton_OnClick" IsCancel="True"/>
+                           Click="closeButton_OnClick"/>
             </StackPanel>
             <StackPanel Grid.Row="1"
                         Grid.Column="0">
