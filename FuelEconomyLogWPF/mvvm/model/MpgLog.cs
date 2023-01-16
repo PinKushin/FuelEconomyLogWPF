@@ -3,7 +3,7 @@ using System.Windows.Navigation;
 
 namespace FuelEconomyLogWPF.mvvm.model;
 
-public struct MpgLog
+public class MpgLog
 {
     public DateTime PurchaseDate { get; set;  }
     public decimal Gallons { get; set; }
