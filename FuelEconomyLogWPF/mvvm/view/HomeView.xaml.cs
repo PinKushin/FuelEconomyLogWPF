@@ -5,13 +5,13 @@ using FuelEconomyLogWPF.mvvm.viewmodel;
 using FuelEconomyLogWPF.mvvm.model;
 using FuelEconomyLogWPF.core;
 using System.Windows;
+using System.ComponentModel;
 
 namespace FuelEconomyLogWPF.mvvm.view;
 
 public partial class HomeView : UserControl
 {
-    //File Path Desktop for testing
-    // Todo: change file save location
+    // file save location / On desktop for testing Todo: Change path for production
     readonly string csvFullFilename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "FuelEconomy.csv");
     public HomeView()
     {
@@ -21,7 +21,6 @@ public partial class HomeView : UserControl
     string sep = ",";
     private void submit_Click(object sender, RoutedEventArgs e)
     {
-        
         //Check we have input
         if (PurchaseDate.Text == null
             || Gallons.Text == null
@@ -41,6 +40,7 @@ public partial class HomeView : UserControl
         {
             return;
         }
+
         //Concatenate the text of All TextBoxes
         string csvFileContents = "\n" +
             PurchaseDate.Text.Normalize() + sep 
@@ -51,11 +51,16 @@ public partial class HomeView : UserControl
 
         //Write the file to folder
         File.AppendAllText(csvFullFilename, csvFileContents);
+
+        //Clear Input Text
         PurchaseDate.Text = string.Empty;
         Gallons.Text = string.Empty;
         Miles.Text = string.Empty;
         Price.Text = string.Empty;
         Notes.Text = string.Empty;
+
+        //update DataContext to update UI
+        DataContext = MpgLogService.ReadFile(csvFullFilename);
     }
 
 }

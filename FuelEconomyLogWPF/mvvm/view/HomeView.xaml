@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:FuelEconomyLogWPF.mvvm.view"
              xmlns:mpg="clr-namespace:FuelEconomyLogWPF.mvvm.model"
              xmlns:vm="clr-namespace:FuelEconomyLogWPF.mvvm.viewmodel"
-             xmlns:Common="clr-namespace:System.Data.Common;assembly=System.Data.Common" x:Class="FuelEconomyLogWPF.mvvm.view.HomeView"
+             xmlns:Common="clr-namespace:System.Data.Common;assembly=System.Data.Common" xmlns:FuelEconomyLogWPF="clr-namespace:FuelEconomyLogWPF" x:Class="FuelEconomyLogWPF.mvvm.view.HomeView"
              mc:Ignorable="d"
              d:DesignHeight="800" d:DesignWidth="600"
              Background="Transparent"
@@ -95,23 +95,32 @@
                      SpellCheck.IsEnabled="True"/>
             <Button x:Name="Submit"
                     Width="50"
-                    Height="18"
+                    Height="24"
                     Content="Submit"
                     ToolTip="Submit"
                     FontSize="12"
-                    Margin="5" Click="submit_Click"/>
+                    Margin="5"
+                    Padding="0"
+                    Click="submit_Click"/>
+
 
         </StackPanel>
 
-        <StackPanel>
-            <DataGrid ItemsSource="{Binding}"
-                AlternatingRowBackground="DarkGray"
-                AlternationCount="2"
-                HorizontalAlignment="Center"
-                Width="auto"
-                CanUserAddRows="True"
-                GridLinesVisibility="All"/>
-        </StackPanel>
+       
+        <DataGrid x:Name="LogDisplay" 
+                    ItemsSource="{Binding}"
+                    AlternatingRowBackground="DarkGray"
+                    AlternationCount="2"
+                    HorizontalAlignment="Center"
+                    Width="auto"
+                    MaxHeight="204"
+                    VerticalScrollBarVisibility="Auto"
+                    CanUserAddRows="False"
+                    CanUserDeleteRows="False"
+                    IsReadOnly="True"
+                    GridLinesVisibility="All"
+                    IsSynchronizedWithCurrentItem="True" />
+       
 
     </StackPanel>
 </UserControl>
