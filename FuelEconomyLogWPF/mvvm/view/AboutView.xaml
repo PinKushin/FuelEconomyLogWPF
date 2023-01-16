@@ -5,16 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:FuelEconomyLogWPF.mvvm.view"
              mc:Ignorable="d"
-             d:DesignHeight="auto" d:DesignWidth="auto"
+             d:DesignHeight="600" d:DesignWidth="800"
              Background="Transparent"
              Foreground="White">
     <Grid>
-        <StackPanel Margin="10">
+        <StackPanel Margin="10"
+                    TextBlock.TextAlignment="Center">
             <TextBlock Text="About"
                        HorizontalAlignment="Center"
                        Margin="20"
                        FontSize="28"
                        TextDecorations="Underline"/>
+            <TextBlock Text="Tool Bar Icons made by:"
+                       HorizontalAlignment="Center"
+                       Margin="0,5,0,5"/>
+            <TextBlock Text="Arrows - Icon mania:&#x0a;https://www.flaticon.com/authors/icon-mania"
+                       HorizontalAlignment="Center"
+                       Margin="0,5,0,5"/>
+            <TextBlock Text="Minimize Icon - Circlon Tech:&#x0a; https://www.flaticon.com/authors/circlon-tech"
+                       HorizontalAlignment="Center"
+                       Margin="0,5,0,5"/>
+            <TextBlock Text="Close Icon - ariefstudio:&#x0a; https://www.flaticon.com/authors/ariefstudio"
+                       HorizontalAlignment="Center"
+                       Margin="0,5,0,5"/>
+
             <TextBlock Text="Fuel Economy Log:"
                        HorizontalAlignment="Center"
                        Margin="10"/>

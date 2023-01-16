@@ -12,12 +12,12 @@ public struct MpgLog
     public decimal Mpg => Miles / Gallons;
     private const double Tax = 0.009;
 
-    public MpgLog(DateTime purchaseDate, 
+    public MpgLog(DateTime purchasedate, 
         decimal gallons, 
         decimal miles, 
         decimal cost)
     {
-        PurchaseDate = purchaseDate;
+        PurchaseDate = purchasedate;
         Gallons = gallons;
         Miles = miles;
         Cost = cost;

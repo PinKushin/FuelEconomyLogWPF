@@ -18,9 +18,19 @@ namespace FuelEconomyLogWPF
             throw new NotSupportedException("Icon Missing");
         }
 
-        private void CloseButton_OnClick(object sender, RoutedEventArgs e)
+        private void closeButton_OnClick(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void minimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Minimize Window
+        }
+
+        private void moveButton_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Move Window
         }
     }
 }

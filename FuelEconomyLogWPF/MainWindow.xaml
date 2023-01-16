@@ -13,10 +13,19 @@
         Background="Transparent"
         AllowsTransparency="True"
         FontFamily="./fonts/#Josefin Sans Light, Verdana"
+        FontSize="16"
         Name="Main">
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
+    <Window.Resources>
+        <ImageBrush x:Key="CloseButtonImg" 
+                    ImageSource="./imgs/close.png" />
+        <ImageBrush x:Key="MinimizeButtonImg" 
+                    ImageSource="./imgs/minimize.png" />
+        <ImageBrush x:Key="MoveButtonImg" 
+                    ImageSource="./imgs/move.png" />
+    </Window.Resources>
     <Border Background="#080818" CornerRadius="20">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -43,21 +52,53 @@
                        Grid.Column="1"
                        Grid.Row="0"
                        Grid.RowSpan="1"/>
-            <Button Name="CloseButton"
-                       Grid.Column="1"
-                       Grid.Row="0"
-                       Width="32"
-                       Height="Auto"
-                       HorizontalAlignment="Right"
-                       VerticalAlignment="Top"
-                       Margin="15"
-                       Content="X"
-                       FontSize="24"
-                       FontWeight="Black"
-                       Foreground="White"
-                       Focusable="True"
-                       Style="{StaticResource CloseButtonTheme}"
-                       Click="CloseButton_OnClick"/>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        HorizontalAlignment="Right">
+                
+                <Button x:Name="MoveButton"
+                        Width="32"
+                        Height="32"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="{StaticResource MoveButtonImg}"
+                        FontSize="24"
+                        FontWeight="Black"
+                        Margin="15"
+                        Focusable="True"
+                        Style="{StaticResource WindowButtonTheme}" 
+                        Click="moveButton_Click"/>
+                
+                <Button x:Name="MinimizeButton"
+                        Width="32"
+                        Height="32"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Background="{StaticResource MinimizeButtonImg}"
+                        FontSize="24"
+                        FontWeight="Black"
+                        Margin="15"
+                        Focusable="True"
+                        Style="{StaticResource WindowButtonTheme}"
+                        Click="minimizeButton_Click"/>
+                
+                <Button Name="CloseButton"
+                           Grid.Column="1"
+                           Grid.Row="0"
+                           Width="32"
+                           Height="32"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Top"
+                           Margin="15"
+                           Background="{StaticResource CloseButtonImg}"
+                           FontSize="24"
+                           FontWeight="Black"
+                           Foreground="White"
+                           Focusable="True"
+                           Style="{StaticResource WindowButtonTheme}"
+                           Click="closeButton_OnClick" IsCancel="True"/>
+            </StackPanel>
             <StackPanel Grid.Row="1"
                         Grid.Column="0">
                 <RadioButton Content="Home"
