@@ -2,4 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.idea/.idea.FuelEconomyLogWPF/.idea
+./.idea/.idea.FuelEconomyLogWPF/
+./.vs/
+*.baml
+./refint
+./obj
+./bin
