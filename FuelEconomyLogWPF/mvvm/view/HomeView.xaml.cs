@@ -2,24 +2,27 @@
 using System.Windows.Controls;
 using System.IO;
 using FuelEconomyLogWPF.mvvm.viewmodel;
-using static FuelEconomyLogWPF.App;
+using FuelEconomyLogWPF.mvvm.model;
+using FuelEconomyLogWPF.core;
+
 namespace FuelEconomyLogWPF.mvvm.view;
 
 public partial class HomeView : UserControl
 {
     //File Path Desktop for testing
     // Todo: change file save location
-    readonly string csvFullFilename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Test.csv");
+    readonly string csvFullFilename = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "FuelEconomy.csv");
     public HomeView()
     {
         InitializeComponent();
+        DataContext = MpgLogService.ReadFile(csvFullFilename);
     }
     string sep = ",";
     private void submit_Click(object sender, System.Windows.RoutedEventArgs e)
     {
         
         //Concatenate the text of All TextBoxes
-        string csvFileContents =
+        string csvFileContents = "\n" +
             PurchaseDate.Text + sep 
             + Gallons.Text + sep 
             + Miles.Text + sep 
@@ -28,29 +31,7 @@ public partial class HomeView : UserControl
 
         //Write the file to folder
         File.AppendAllText(csvFullFilename, csvFileContents);
+        ((MainWindow)System.Windows.Application.Current.MainWindow).UpdateLayout();
     }
-    string[]? lines;
-    private void userControl_Loaded(object sender, System.Windows.RoutedEventArgs e)
-    {
-        if (!File.Exists(csvFullFilename)) 
-        {
-            string csvFileHeaders = "Purchase Date" + sep
-                + "Gallons" + sep 
-                + "Miles" + sep 
-                + "Price" + sep 
-                + "Notes";
-            File.AppendAllText(csvFullFilename, csvFileHeaders);
-        }
 
-
-        try
-        {
-            lines = File.ReadAllLines(csvFullFilename);
-            Console.ReadLine();
-        }
-        catch(Exception ex)
-        {
-            Console.WriteLine("Exception: ", ex.Message);
-        }
-    }
 }

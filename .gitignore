@@ -32,3 +32,9 @@
 /FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.dll
 /FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.g.resources
 /FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.pdb
+/ProjectEvaluation/
+/v17/
+/.vs/ProjectEvaluation/fueleconomylogwpf.projects.v5.2
+/.vs/ProjectEvaluation/fueleconomylogwpf.metadata.v5.2
+*.v5.2
+*.v2
