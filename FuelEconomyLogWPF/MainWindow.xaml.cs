@@ -12,11 +12,7 @@ namespace FuelEconomyLogWPF
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void icon_ImageFailed(object sender, ExceptionRoutedEventArgs e)
-        {
-            throw new NotSupportedException("Icon Missing");
+            SizeToContent = SizeToContent.Manual;
         }
 
         private void closeButton_OnClick(object sender, RoutedEventArgs e)
