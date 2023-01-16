@@ -11,11 +11,7 @@
              d:DesignHeight="800" d:DesignWidth="600"
              Background="Transparent"
              Foreground="White"
-             Loaded="userControl_Loaded"
              FontFamily="./fonts/#Josefin Sans Light, Verdana">
-    <UserControl.Resources>
-        <vm:MpgLogViewModel x:Key="ViewModel"/>
-    </UserControl.Resources>
     <StackPanel>
         <TextBlock Text="Fuel Log"
                    Foreground="White"
@@ -106,14 +102,16 @@
                     Margin="5" Click="submit_Click"/>
 
         </StackPanel>
-        <Grid x:Name="MpgGrid" DataContext="{StaticResource ViewModel}">
-            <DataGrid ItemsSource="{Binding MpgLog}"
-                   AlternatingRowBackground="DarkGray"
-                   AlternationCount="2"
-                   HorizontalAlignment="Center"
-                   Width="auto"
-                   CanUserAddRows="True"
-                   GridLinesVisibility="All"/>
-        </Grid>
+
+        <StackPanel>
+            <DataGrid ItemsSource="{Binding}"
+                AlternatingRowBackground="DarkGray"
+                AlternationCount="2"
+                HorizontalAlignment="Center"
+                Width="auto"
+                CanUserAddRows="True"
+                GridLinesVisibility="All"/>
+        </StackPanel>
+
     </StackPanel>
 </UserControl>

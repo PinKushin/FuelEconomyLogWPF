@@ -9,17 +9,8 @@ public class MpgLog
     public decimal Gallons { get; set; }
     public decimal Miles { get; set; }
     public decimal Cost { get; set; }
+    public string? Notes { get; set; }
     public decimal Mpg => Miles / Gallons;
     private const double Tax = 0.009;
 
-    public MpgLog(DateTime purchasedate, 
-        decimal gallons, 
-        decimal miles, 
-        decimal cost)
-    {
-        PurchaseDate = purchasedate;
-        Gallons = gallons;
-        Miles = miles;
-        Cost = cost;
-    }
 }

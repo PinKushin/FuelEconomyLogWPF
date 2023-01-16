@@ -11,6 +11,7 @@
     <None Remove="fel-cropped.png" />
     <None Remove="fonts\JosefinSans-VariableFont_wght.ttf" />
     <None Remove="imgs\close.png" />
+    <None Remove="imgs\fel-cropped.png" />
     <None Remove="imgs\minimize.png" />
     <None Remove="imgs\move.png" />
     <None Remove="imgs\Splash.png" />
@@ -18,12 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="imgs\fel-cropped.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <SplashScreen Include="imgs\Splash.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </SplashScreen>
-    <Content Include="imgs\fel-cropped.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="imgs\close.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -39,7 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="mvvm\model\" />
     <Folder Include="mvvm\viewmodel\" />
     <Folder Include="mvvm\view\" />
   </ItemGroup>
