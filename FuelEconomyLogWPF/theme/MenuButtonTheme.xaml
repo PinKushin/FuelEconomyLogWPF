@@ -12,7 +12,7 @@
                               Background="{TemplateBinding Background}">
                             <TextBlock Text="{TemplateBinding Property=Content}"
                                        VerticalAlignment="Center"
-                                       Margin="10"/>
+                                       Margin="20, 10"/>
 
                         </Grid>
                     </ControlTemplate>
