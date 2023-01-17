@@ -18,26 +18,29 @@
                        TextDecorations="Underline"/>
             <TextBlock Text="Tool Bar Icons made by:"
                        HorizontalAlignment="Center"
-                       Margin="0,5,0,5"/>
+                       Margin="0,5"/>
             <TextBlock Text="Arrows - Icon mania:&#x0a;https://www.flaticon.com/authors/icon-mania"
                        HorizontalAlignment="Center"
-                       Margin="0,5,0,5"/>
+                       Margin="0,5"/>
             <TextBlock Text="Minimize Icon - Circlon Tech:&#x0a; https://www.flaticon.com/authors/circlon-tech"
                        HorizontalAlignment="Center"
-                       Margin="0,5,0,5"/>
+                       Margin="0,5"/>
             <TextBlock Text="Close Icon - ariefstudio:&#x0a; https://www.flaticon.com/authors/ariefstudio"
                        HorizontalAlignment="Center"
-                       Margin="0,5,0,5"/>
+                       Margin="0,5"/>
 
             <TextBlock Text="Fuel Economy Log:"
                        HorizontalAlignment="Center"
-                       Margin="10"/>
+                       Margin="10,30,10,0"/>
+            <TextBlock Text="Graph made with ScottPlot.NET"
+                       HorizontalAlignment="Center"
+                       Margin="10, 5"/>
             <TextBlock Text="Copyright 2023 by John Moore"
                        HorizontalAlignment="Center"
-                       Margin="10"/>
+                       Margin="10, 5"/>
             <TextBlock Text="Written For My Harvard CS50 Final Project"
                        HorizontalAlignment="Center"
-                       Margin="20"></TextBlock>
+                       Margin="5,5"></TextBlock>
         </StackPanel> 
     </Grid>
 </UserControl>

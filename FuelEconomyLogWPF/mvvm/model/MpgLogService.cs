@@ -16,16 +16,17 @@ namespace FuelEconomyLogWPF.mvvm.model
             {
                 const string sep = ",";
 
-                string csvFileHeaders = "Purchase Date" + sep
+                string csvFileHeaders = "PurchaseDate" + sep
                     + "Gallons" + sep
                     + "Miles" + sep
                     + "Price" + sep
-                    + "Notes";
+                    + "Notes" + sep
+                    + "Mpg";
                 File.AppendAllText(filepath, csvFileHeaders);
             }
 
             var lines = File.ReadAllLines(filepath);
-      
+
             var data = from line in lines.Skip(1)
                        let split = line.Split(',')
                        select new MpgLog
@@ -34,7 +35,8 @@ namespace FuelEconomyLogWPF.mvvm.model
                            Gallons = decimal.Parse(split[1]),
                            Miles = decimal.Parse(split[2]),
                            Cost = decimal.Parse(split[3]),
-                           Notes = split[4]
+                           Notes = split[4],
+                           Mpg = decimal.Parse(split[2]) / decimal.Parse(split[1])
                        };
 
             return data.ToList();

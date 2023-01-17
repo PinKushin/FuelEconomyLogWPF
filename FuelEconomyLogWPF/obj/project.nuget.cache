@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lJODWoGpMOVnIpw4nZmIhELnxafIr6840L8+XSFhqU05QPZEAlMMBxAmqbnUTXAG6VK5xi1aL/3UE3yGg3qm8A==",
+  "dgSpecHash": "4filg0HEG6p9q3bwFhFJSEy3oC3EAfDAFemZ1rqnvP3DR2Xo+mqNgbZyRO8VQTKb0m+KuNIRy9466x9rUt06TQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\John\\source\\repos\\FuelEconomyLogWPF\\FuelEconomyLogWPF\\FuelEconomyLogWPF.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\John\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.4\\microsoft.netcore.platforms.3.1.4.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\scottplot\\4.1.60\\scottplot.4.1.60.nupkg.sha512",

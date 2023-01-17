@@ -9,7 +9,7 @@ namespace FuelEconomyLogWPF.mvvm.viewmodel;
 
 public class MpgLogViewModel : ObservableObject 
 {
-    private ObservableCollection<MpgLog> _mpglog;
+    private readonly ObservableCollection<MpgLog> _mpglog;
     public ObservableCollection<MpgLog> MpgLog => _mpglog;
 
     public MpgLogViewModel()
