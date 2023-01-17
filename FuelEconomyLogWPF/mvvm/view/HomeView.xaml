@@ -13,7 +13,7 @@
              Foreground="White"
              FontFamily="./fonts/#Josefin Sans Light, Verdana">
     <StackPanel>
-        <TextBlock Text="Fuel Log"
+        <TextBlock Text="New Fuel Log"
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Center"
@@ -94,14 +94,19 @@
                      TextWrapping="WrapWithOverflow"
                      SpellCheck.IsEnabled="True"/>
             <Button x:Name="Submit"
-                    Width="50"
-                    Height="24"
+                    Width="auto"
+                    Height="auto"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
                     Content="Submit"
                     ToolTip="Submit"
                     FontSize="12"
                     Margin="5"
-                    Padding="0"
-                    Click="submit_Click"/>
+                    Padding="20,5"
+                    Click="submit_Click"
+                    Style="{StaticResource SubmitButtonTheme}"/>
+                    
 
 
         </StackPanel>
