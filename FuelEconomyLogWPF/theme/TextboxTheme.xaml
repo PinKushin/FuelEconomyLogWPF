@@ -33,7 +33,8 @@
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
+                                            <DataTrigger Binding="{Binding Text,
+                                                ElementName=InputBox}" Value="">
                                                 <Setter Property="Visibility" Value="Visible"/>
                                             </DataTrigger>
                                         </Style.Triggers>
