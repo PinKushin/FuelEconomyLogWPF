@@ -24,7 +24,7 @@ log my gas mileage over time. Was going to make it a website so
 that I could access it from anywhere, but would then have to buy hosting.  
 That's not in my budget at the moment.
 
-The code is arranged in a MVVC format because that is the standard for  
+The code is arranged in a MVVM format because that is the standard for  
 WPF applications. I chose MPF over windows forms for the ability to customize  
 the appearance more easily, although that lead to having a more difficult time  
 with the User's data because I had to learn about Data Binding. I still don't  
@@ -56,3 +56,37 @@ title bar by using WindowStyle="None" in the window tag, the navigation RadioBut
 for the user to change Views, and a ContentControl to display those Views.  
 The .cs contains the logic for the close, minimize, and maximize buttons.
 
+### Theme Folder:
+This folder contains the Themes used to style the buttons and input fields  
+Most of it is simple xaml. Only styling attributes go here.
+
+### MVVM/Model Folder:
+This folder contains the MpgLog model in MpgLog.cs. This is used to help validate  
+user input, and hold data for the reading and writing of the csv file.  
+There is also the MpgLogService which is used to initially create the csv  
+file, read a csv file and bind it to the model, calculating Mpg as it does so,  
+and return that model as a list to whatever calls ReadFile.
+
+### MVVM/View Folder:
+Views are what contain the content of the application, most of the heavy lifting  
+is done here. Individual styling, text, the graph, and the table are done in these .xaml files.  
+The HomeView.xaml.cs file contains the main logic needed get input data from the user,  
+validate that input, and write it to a csv file. As well as the logic needed to read the csv  
+file into the DataTable and update the view.  
+The GraphView.xaml.cs file contains the logic needed to display the graph of the calculated Mpg.  
+The AboutView.xaml.cs file is empty because the about page has no user interaction
+
+### MVVM/ViewModel
+Most ViewModels here are empty other than the MainViewViewModel.cs, which contains  
+the DataBindings for every View, and MpgLogViewModel.cs, which contains it's data  
+bindings.
+
+### Core:
+Core contains the classes needed to let the application selectively update elements  
+instead of refreshing the whole page.
+
+The font and img folders are self explanatory. This was a great learning experience  
+and I've enjoyed the challenge of completing this course. This application in particular  
+exposed me to the MVVM design model. I had some experience with MVC in ASP.NET, but  
+using that short of design in a desktop application was new for me. If you made it this far  
+# THANK YOU!
