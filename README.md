@@ -4,8 +4,8 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/PinKushin/FuelEconomyLogWPF?style=plastic)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/PinKushin?style=plastic)
 ![GitHub issues](https://img.shields.io/github/issues/PinKushin/FuelEconomyLogWPF?style=plastic)
-## Video Demo: URL HERE
-## Description:
+### Video Demo: URL HERE
+### Description:
 This Program was made by John Moore for CS50.  
 It allows a user to input these, after they purchase gas:
 - The date in DateTime format,
@@ -39,8 +39,8 @@ make a GUI application from scratch over using WPF and C#. It does have the down
 of being a windows only application because of WPF, even though I'm using .NET Core  
 which is cross-platform.
 
-### File List
-#### App.xaml & App.xaml.cs:  
+## File List
+### App.xaml & App.xaml.cs:  
 This is the application. Interaction logic would go hear in a non MVVC app.  
 I had no use for the .cs file, but it is coupled to the .xaml file which  
 I do need to import custom ResourceDictionary sources. Which are used as  
@@ -48,7 +48,7 @@ themes to style the buttons and input boxes of the program. It also includes
 DataTemplates for every View(page, location) I need/want to display to the user.  
 This application uses 3 views.
 
-#### MainWindow.xaml and MainWindow.xaml.cs:  
+### MainWindow.xaml and MainWindow.xaml.cs:  
 This if the Window used to display all the Views. The .xaml contains the default  
 styling such as font, font-size, icon, and window style, the replacement close,  
 minimize, and maximize buttons that are needed because I removed the default windows  
