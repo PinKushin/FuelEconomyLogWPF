@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Windows.Controls;
 using System.IO;
-using FuelEconomyLogWPF.mvvm.viewmodel;
 using FuelEconomyLogWPF.mvvm.model;
-using FuelEconomyLogWPF.core;
 using System.Windows;
-using System.ComponentModel;
 
 namespace FuelEconomyLogWPF.mvvm.view;
 

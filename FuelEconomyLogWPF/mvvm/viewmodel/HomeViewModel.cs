@@ -1,6 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using FuelEconomyLogWPF.core;
+﻿using FuelEconomyLogWPF.core;
 
 namespace FuelEconomyLogWPF.mvvm.viewmodel;
 

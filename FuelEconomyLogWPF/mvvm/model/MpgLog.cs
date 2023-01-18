@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Navigation;
 using CsvHelper.Configuration.Attributes;
 
 namespace FuelEconomyLogWPF.mvvm.model;
