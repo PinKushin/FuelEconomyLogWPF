@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "4filg0HEG6p9q3bwFhFJSEy3oC3EAfDAFemZ1rqnvP3DR2Xo+mqNgbZyRO8VQTKb0m+KuNIRy9466x9rUt06TQ==",
+  "dgSpecHash": "z7Vm2N3+uoYiVG777W/cqnDXm8dtLEo+mqYySf/x2RJ2eA1DMHPcyqhmyPY4oP4P1WAwl0Ho/eY48t7hzYy9Wg==",
   "success": true,
   "projectFilePath": "C:\\Users\\John\\source\\repos\\FuelEconomyLogWPF\\FuelEconomyLogWPF\\FuelEconomyLogWPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\John\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
-    "C:\\Users\\John\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.4\\microsoft.netcore.platforms.3.1.4.nupkg.sha512",
-    "C:\\Users\\John\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\John\\.nuget\\packages\\microsoft.netcore.platforms\\7.0.0\\microsoft.netcore.platforms.7.0.0.nupkg.sha512",
+    "C:\\Users\\John\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\scottplot\\4.1.60\\scottplot.4.1.60.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\scottplot.wpf\\4.1.60\\scottplot.wpf.4.1.60.nupkg.sha512",
-    "C:\\Users\\John\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",
+    "C:\\Users\\John\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
   ],
   "logs": []
