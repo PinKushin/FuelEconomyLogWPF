@@ -11,7 +11,6 @@ namespace FuelEconomyLogWPF
         public MainWindow()
         {
             InitializeComponent();
-            SizeToContent = SizeToContent.Manual;
         }
 
         private void closeButton_OnClick(object sender, RoutedEventArgs e)
