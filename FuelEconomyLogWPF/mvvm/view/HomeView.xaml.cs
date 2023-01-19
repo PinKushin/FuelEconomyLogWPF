@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using System.IO;
 using FuelEconomyLogWPF.mvvm.model;
 using System.Windows;
+using System.Globalization;
 
 namespace FuelEconomyLogWPF.mvvm.view;
 
@@ -27,9 +28,9 @@ public partial class HomeView : UserControl
             return;
         }
         //Validate Input
-        DateTime tmp;
+        DateOnly tmp;
         decimal dec;
-        if (!DateTime.TryParse(PurchaseDate.Text, out tmp)
+        if (!DateOnly.TryParse(PurchaseDate.Text, out tmp)
             || !decimal.TryParse(Gallons.Text, out dec)
             || !decimal.TryParse(Miles.Text, out dec)
             || !decimal.TryParse(Price.Text, out dec))
@@ -37,8 +38,8 @@ public partial class HomeView : UserControl
             return;
         }
         //Calculate Miles Per Gallon
-        decimal Mpg = decimal.Parse(Gallons.Text.Normalize())
-            / decimal.Parse(Miles.Text.Normalize());
+        decimal Mpg = decimal.Parse(Miles.Text.Normalize())
+            / decimal.Parse(Gallons.Text.Normalize());
         //Concatenate the text of All TextBoxes and Mpg      
         string csvFileContents = "\n" +
             PurchaseDate.Text.Normalize() + sep 
@@ -46,7 +47,7 @@ public partial class HomeView : UserControl
             + Miles.Text.Normalize() + sep 
             + Price.Text.Normalize() + sep
             + Notes.Text.Normalize() + sep
-            + Mpg;
+            + Mpg.ToString("F2", CultureInfo.InvariantCulture);
 
         //append the mpg log to file
         File.AppendAllText(csvFullFilename, csvFileContents);
