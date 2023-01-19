@@ -42,3 +42,4 @@
 *.suo
 /.vs/FuelEconomyLogWPF/DesignTimeBuild/.dtbcache.v2
 /.vs/FuelEconomyLogWPF/v17/.futdcache.v2
+/FuelEconomyLogWPF/Properties/PublishProfiles
