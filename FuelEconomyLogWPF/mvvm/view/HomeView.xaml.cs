@@ -37,7 +37,8 @@ public partial class HomeView : UserControl
             return;
         }
         //Calculate Miles Per Gallon
-        decimal Mpg = decimal.Parse(Gallons.Text.Normalize()) / decimal.Parse(Miles.Text.Normalize());
+        decimal Mpg = decimal.Parse(Gallons.Text.Normalize())
+            / decimal.Parse(Miles.Text.Normalize());
         //Concatenate the text of All TextBoxes and Mpg      
         string csvFileContents = "\n" +
             PurchaseDate.Text.Normalize() + sep 
@@ -47,7 +48,7 @@ public partial class HomeView : UserControl
             + Notes.Text.Normalize() + sep
             + Mpg;
 
-        //Write the file to folder
+        //append the mpg log to file
         File.AppendAllText(csvFullFilename, csvFileContents);
 
         //Clear Input Text
@@ -57,7 +58,7 @@ public partial class HomeView : UserControl
         Price.Text = string.Empty;
         Notes.Text = string.Empty;
 
-        //update DataContext to update UI
+        //update DataContext by reading file to DataTable
         DataContext = MpgLogService.ReadFile(csvFullFilename);
     }
 
