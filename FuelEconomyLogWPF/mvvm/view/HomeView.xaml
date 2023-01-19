@@ -117,7 +117,7 @@
                     AlternatingRowBackground="DarkGray"
                     AlternationCount="2"
                     HorizontalAlignment="Center"
-                    Width="auto"
+                    MaxWidth="600"
                     MaxHeight="204"
                     VerticalScrollBarVisibility="Auto"
                     CanUserAddRows="False"
