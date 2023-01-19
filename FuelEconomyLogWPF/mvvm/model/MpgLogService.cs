@@ -27,12 +27,12 @@ namespace FuelEconomyLogWPF.mvvm.model
                        let split = line.Split(',')
                        select new MpgLog
                        {
-                           PurchaseDate = DateTime.Parse(split[0], System.Globalization.CultureInfo.InvariantCulture),
+                           PurchaseDate = DateOnly.Parse(split[0], System.Globalization.CultureInfo.InvariantCulture),
                            Gallons = decimal.Parse(split[1]),
                            Miles = decimal.Parse(split[2]),
                            Cost = decimal.Parse(split[3]),
                            Notes = split[4],
-                           Mpg = decimal.Parse(split[2]) / decimal.Parse(split[1])
+                           Mpg = decimal.Parse(split[5])
                        };
 
             return data.ToList();

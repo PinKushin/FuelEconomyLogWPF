@@ -6,7 +6,7 @@ namespace FuelEconomyLogWPF.mvvm.model;
 public class MpgLog
 {
     [Name("Purchase Date")]
-    public DateTime PurchaseDate { get; set;  }
+    public DateOnly PurchaseDate { get; set;  }
     [Name("Gallons")]
     public decimal Gallons { get; set; }
     [Name("Miles")]
