@@ -4,7 +4,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/PinKushin/FuelEconomyLogWPF?style=plastic)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/PinKushin?style=plastic)
 ![GitHub issues](https://img.shields.io/github/issues/PinKushin/FuelEconomyLogWPF?style=plastic)
-### Video Demo: URL HERE
+### Video Demo: https://youtu.be/k-TOhZYaPZI
 ### Description:
 This Program was made by John Moore for CS50.  
 It allows a user to input these, after they purchase gas:
