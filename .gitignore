@@ -46,7 +46,7 @@
 /FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.csproj.AssemblyReference.cache
 /FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.assets.cache
 /FuelEconomyLogWPF/obj/Debug/net7.0-windows/theme/TextboxTheme.baml
-/FuelEconomyLogWPF/obj/Debug/net7.0-windows/theme/MenuButtonTheme.baml
+/FuelEconomyLogWPF/obj/*
 /FuelEconomyLogWPF/obj/Debug/net7.0-windows/theme/MenuButtonTheme.baml
 /FuelEconomyLogWPF/obj/Debug/net7.0-windows/theme/TextboxTheme.baml
 /FuelEconomyLogWPF/bin/Debug/net7.0-windows/FuelEconomyLogWPF.deps.json
@@ -57,3 +57,7 @@ FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.GeneratedMSBuildEdi
 FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.GeneratedMSBuildEditorConfig.editorconfig
 FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.GeneratedMSBuildEditorConfig.editorconfig
 FuelEconomyLogWPF/FuelEconomyLogWPF.csproj.user
+.vscode/launch.json
+.vscode/tasks.json
+FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.GeneratedMSBuildEditorConfig.editorconfig
+FuelEconomyLogWPF/obj/Debug/net7.0-windows/FuelEconomyLogWPF.GeneratedMSBuildEditorConfig.editorconfig
